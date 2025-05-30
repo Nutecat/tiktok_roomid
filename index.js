@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 app.get("/room/:username", async (req, res) => {
   const { username } = req.params;
   try {
-    const url = \`https://www.tiktok.com/@\${username}/live\`;
+	const url = `https://www.tiktok.com/@${username}/live`;
     const html = await fetch(url, {
       headers: {
         "user-agent": "Mozilla/5.0"
